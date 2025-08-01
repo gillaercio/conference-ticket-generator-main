@@ -1,0 +1,107 @@
+body {
+  display: grid;
+  justify-self: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 375px;
+  padding: 1rem;
+  color: var(--Neutral-300);
+  background-image: url(../images/background-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 50%;
+}
+
+.header,
+#form-section,
+#ticket-section {
+  min-width: 320px;
+  max-width: 375px;
+  padding: 1rem;
+  /* outline: 1px dashed yellow; */
+}
+
+.header {
+  display: grid;
+  justify-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  padding-block: 1.5rem;
+  /* outline: 1px dashed green; */
+}
+
+.title {
+  width: 80%;
+  font: var(--text-lg-mobile);
+  /* outline: 1px dashed red; */
+}
+
+.subtitle {
+  width: 70%;
+  padding-block: 1rem;
+  font: var(--text-md);
+  /* outline: 1px dashed white; */
+}
+
+.upload-area,
+.label {
+  font: var(--text-md);
+}
+
+.upload-text {
+  font: var(--text-sm);
+}
+
+.upload-wrapper {
+  padding: 3rem 2.5rem;
+  outline: 1px dashed var(--Neutral-500);
+  text-align: center;
+}
+
+#avatar-upload {
+  padding-block: 2rem;
+  background-color: var(--Neutral-0);
+  border-radius: 0.5rem;
+  border: 1px solid red;
+}
+
+.upload-wrapper,
+.input, .button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font: var(--text-md);
+  background-color: var(--Neutral-300);
+  color: var(--Neutral-300);
+  /* opacity: 0.4; */
+}
+
+.file-info {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.5rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1.7rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.file-info img {
+  width: 15px;
+}
+
+.file-info span {
+  font: var(--text-sm);
+  color: var(--Neutral-500);
+}
+
+#ticket-section {
+  display: none;
+}

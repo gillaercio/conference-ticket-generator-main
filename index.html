@@ -8,26 +8,27 @@
   
   <title>Frontend Mentor | Conference ticket generator</title>
 
+  <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
 
   <header class="header">
     <img src="assets/images/logo-full.svg" alt="Coding Conf logo" class="logo">
-    Coding Conf
+    <!-- Coding Conf -->
     <h1 class="title">Your Journey to Coding Conf 2025 Starts Here!</h1>
     <p class="subtitle">Secure your spot at next year's biggest coding conference.</p>
   </header>
   
-  <section class="form-section" id="form-section">
+  <section id="form-section">
     <form id="ticket-form">
-      <div class="upload-wrapper">
-        <input type="file" id="avatar-upload" hidden accept=".jpg .jpeg .png">
-        <label for="avatar-upload" class="upload-area">
-          Upload Avatar
+      <label for="avatar-upload" class="upload-area">
+        Upload Avatar
+        <div class="upload-wrapper">
+          <input type="file" id="avatar-upload" hidden accept=".jpg .jpeg .png">
           <img src="assets/images/icon-upload.svg" alt="Upload Icon" class="upload-icon">
           <p class="upload-text">Drag and drop or click to upload</p>
-        </label>
-      </div>
+        </div>
+      </label>
     
       <div class="file-info">
         <img src="assets/images/icon-info.svg" alt="Info Icon">
@@ -47,7 +48,7 @@
     </form>
   </section>
 
-  <section class="ticket-section" id="ticket-section">
+  <section id="ticket-section">
     <h1 class="congrats">Congrats, <span id="ticket-name"><!-- Full Name --></span>! Your ticket is ready.</h1>
     <p class="confirmation-text">
       We've emailed your ticket to <span id="ticket-email"><!-- Email Address --></span> and will send updates in the run up to the event.
