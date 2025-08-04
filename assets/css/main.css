@@ -31,6 +31,10 @@ body {
   width: 100%;
 }
 
+#form-section {
+  display: none;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -48,14 +52,17 @@ body {
 .subtitle {
   width: 80%;
   text-align: center;
+  display: none;
 }
 
-.title {
+.title,
+.congrats {
   padding-block: 1.4rem;
   font: var(--text-lg-mobile);
 }
 
-.subtitle {
+.subtitle,
+.confirmation-text {
   padding: 1rem 0 1.5rem 0;
   font: var(--text-md);
 }
@@ -192,9 +199,119 @@ body {
 }
 
 #ticket-section {
-  display: none;
-  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   text-align: center;
+}
+
+.congrats,
+.confirmation-text {
+  width: 75%;
+}
+
+#ticket-name {
+  color: transparent;
+  background-image: var(--Gradient-text);
+  background-clip: text;
+}
+
+#ticket-email {
+  color: var(--Orange-500);
+}
+
+.ticket {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 360px;
+  padding: 2.5rem 1.3rem;
+  margin-block: 1rem;
+  background-image: url(../images/pattern-ticket.svg);
+  background-color: rgba(18, 18, 38, 0.6);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.ticket::after {
+  content: "#01609";
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  font: var(--text-md);
+  color: var(--Neutral-300);
+  text-orientation: mixed;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+
+.ticket-conf {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.ticket-logo {
+  width: 25px;
+}
+
+.ticket-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  width: 60%;
+}
+
+.conf-name {
+  font: var(--text-ticket);
+  align-items: flex-start;
+}
+
+.conf-date,
+#ticket-github {
+  font: var(--text-sm-ticket);
+  opacity: 0.6;
+}
+
+.ticket-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#ticket-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+}
+
+.ticket-id {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  align-self: flex-start;
+  font: var(--text-md);
+}
+
+.github {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.github img {
+  width: 18px;
 }
 
 @media screen and (min-width: 768px) {
