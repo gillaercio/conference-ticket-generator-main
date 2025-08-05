@@ -31,9 +31,9 @@ body {
   width: 100%;
 }
 
-#form-section {
+/* #form-section {
   display: none;
-}
+} */
 
 .header {
   display: flex;
@@ -52,7 +52,7 @@ body {
 .subtitle {
   width: 80%;
   text-align: center;
-  display: none;
+  /* display: none; */
 }
 
 .title,
@@ -79,13 +79,7 @@ body {
   gap: 0.5rem;
   margin-bottom: 1rem;
   font: var(--text-md);
-  /* color: var(--Neutral-300); */
 }
-
-/* .upload-wrapper > span,
-.upload-wrapper > label {
-  display: block;
-} */
 
 .upload-area {
   display: flex;
@@ -199,7 +193,8 @@ body {
 }
 
 #ticket-section {
-  display: flex;
+  /* display: flex; */
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
@@ -225,16 +220,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2.5rem;
+  gap: 1.8rem;
   width: 100%;
   max-width: 360px;
-  padding: 2.5rem 1.3rem;
+  padding: 3.2rem 1.2rem;
   margin-block: 1rem;
   background-image: url(../images/pattern-ticket.svg);
   background-color: rgba(18, 18, 38, 0.6);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   backdrop-filter: blur(4px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -332,6 +327,25 @@ body {
       top left;
     background-size: auto, 30%, 70%, 180px, 180px, cover;
   }
+
+  .logo {
+    width: 180px;
+  }
+
+  .title,
+  .congrats {
+    font: var(--text-lg-desktop);
+  }
+
+  .subtitle,
+  .confirmation-text {
+    font-size: clamp(1.4rem, 1.4rem + 1.666vw, 1.8rem);
+  }
+
+  .ticket {
+    gap: 2rem;
+    padding: 3.6rem 1.2rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -352,5 +366,33 @@ body {
       center right 30%,
       top left;
     background-size: auto, 30%, 60%, 180px, 180px, cover;
+  }
+
+  #container,
+  #form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #container,
+  #ticket-section {
+    max-width: 768px;
+    width: 100%;
+  }
+
+  .title,
+  .subtitle,
+  .congrats {
+    width: 100%;
+  }
+
+  .title,
+  .congrats {
+    font-size: clamp(3rem, 3.4rem + 1.666vw, 4.9rem);
+  }
+
+  .confirmation-text {
+    width: 50%;
   }
 }
