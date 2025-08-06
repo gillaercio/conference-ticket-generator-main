@@ -23,8 +23,8 @@
     <section id="form-section">
       <form id="ticket-form">
         <div class="upload-wrapper">
-          Upload Avatar
-          <label for="avatar-upload" id="upload-area">
+          <span class="label" id="upload-avatar-label">Upload Avatar</span>
+          <label for="avatar-upload" id="upload-area" role="button" tabindex="0">
             <input type="file" id="avatar-upload" hidden accept=".jpg .jpeg .png">
             <img src="assets/images/icon-upload.svg" alt="Upload Icon" class="upload-icon">
             <p class="upload-text">Drag and drop or click to upload</p>
@@ -39,23 +39,23 @@
         <label for="full-name" class="label">Full Name</label>
         <input type="text" id="full-name" name="full-name" class="input" required>
     
-        <label for="email" class="label">Email Address</label>
+        <label for="form-email" class="label">Email Address</label>
         <input type="email" id="form-email" name="email" class="input" placeholder="example@email.com" required>
         <div id="error-message">
           <img src="assets/images/icon-info-error.svg" alt="Info Icon Error">
           <span>Please enter a valid email address.</span>
         </div>
     
-        <label for="github" class="label">GitHub Username</label>
+        <label for="form-github" class="label">GitHub Username</label>
         <input type="text" id="form-github" name="github" class="input" placeholder="@yourusername" required>
     
         <button type="submit" id="button" onclick="sendButton(event)">Generate My Ticket</button>
       </form>
     </section>
     <section id="ticket-section">
-      <h1 class="congrats">Congrats, <span id="ticket-name"><!-- Full Name --> Jonathan Kristof</span>! Your ticket is ready.</h1>
+      <h1 class="congrats">Congrats, <span id="ticket-name"><!-- Jonathan Kristof --></span>! Your ticket is ready.</h1>
       <p class="confirmation-text">
-        We've emailed your ticket to <span id="ticket-email"><!-- Email Address -->jonathan@email.com</span> and will send updates in the run up to the event.
+        We've emailed your ticket to <span id="ticket-email"><!-- jonathan@email.com --></span> and will send updates in the run up to the event.
       </p>
       <div class="ticket">
         <div class="ticket-conf">
@@ -69,10 +69,10 @@
           <img src="assets/images/image-avatar.jpg" alt="User Avatar" id="ticket-avatar">
 
           <div class="ticket-id">
-            <span class="name"><!-- Full Name -->Jonathan Kristof</span>
+            <span id="ticket-name-id"><!-- Jonathan Kristof --></span>
             <div class="github">
               <img src="assets/images/icon-github.svg" alt="Github Icon">
-              <span id="ticket-github"><!-- Email Address -->@jonathankristof0101</span>
+              <span id="ticket-github"><!-- @jonathankristof0101--></span>
             </div>
           </div>
         </div>

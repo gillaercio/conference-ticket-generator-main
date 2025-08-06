@@ -101,7 +101,12 @@ body {
   background-color: var(--Neutral-700);
 }
 
-#upload-area:has(input:focus) {
+/* #upload-area:has(input:focus) {
+  outline: 2px solid var(--Neutral-500);
+  outline-offset: 4px;
+} */
+
+#upload-area.focused {
   outline: 2px solid var(--Neutral-500);
   outline-offset: 4px;
 }
@@ -232,7 +237,7 @@ body {
   gap: 1.8rem;
   width: 100%;
   max-width: 360px;
-  padding: 3.2rem 1.2rem;
+  padding: 3.2rem 1.5rem;
   margin-block: 1rem;
   background-image: url(../images/pattern-ticket.svg);
   background-color: rgba(18, 18, 38, 0.6);
@@ -303,9 +308,17 @@ body {
   flex-direction: column;
 }
 
-.name {
+#full-name,
+#ticket-name-id {
   align-self: flex-start;
+}
+
+#full-name {
   font: var(--text-md);
+}
+
+#ticket-name-id {
+  font: var(--text-ticket);
 }
 
 .github {
@@ -403,5 +416,13 @@ body {
 
   .confirmation-text {
     width: 50%;
+  }
+}
+
+@media screen and(max-width: 1023px) {
+  body {
+    display: block;
+    min-height: auto;
+    padding: 2rem 1rem;
   }
 }
