@@ -23,11 +23,16 @@
     <section id="form-section">
       <form id="ticket-form">
         <div class="upload-wrapper">
-          <span class="label" id="upload-avatar-label">Upload Avatar</span>
+          <span id="upload-avatar-label">Upload Avatar</span>
           <label for="avatar-upload" id="upload-area" role="button" tabindex="0">
             <input type="file" id="avatar-upload" hidden accept=".jpg .jpeg .png">
-            <img src="assets/images/icon-upload.svg" alt="Upload Icon" class="upload-icon">
+            <img id="avatar-preview" src="assets/images/icon-upload.svg" alt="Upload Icon" class="upload-icon">
             <p class="upload-text">Drag and drop or click to upload</p>
+
+            <div class="upload-actions" style="display: none;">
+              <button type="button" id="remove-avatar-button">Remove Button</button>
+              <button type="button" id="change-avatar-button">Change Button</button>
+            </div>
           </label>
         </div>
     

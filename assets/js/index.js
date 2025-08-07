@@ -52,6 +52,8 @@ function sendButton(event) {
   }
 }
 
+// Upload Area Focus
+
 const uploadLabelText = document.getElementById('upload-avatar-label');
 const uploadInput = document.getElementById('avatar-upload');
 const uploadArea = document.getElementById('upload-area');
@@ -73,6 +75,8 @@ uploadArea.addEventListener("blur", () => {
   uploadArea.classList.remove("focused");
 });
 
+
+// Email error reset
 document.getElementById("form-email").addEventListener("input", function() {
   const email = this;
   const errorMessage = document.getElementById("error-message");
@@ -80,3 +84,40 @@ document.getElementById("form-email").addEventListener("input", function() {
   email.style.borderColor = "var(--Neutral-700)";
   errorMessage.style.display = "none";
 })
+
+
+// Avatar upload preview + buttons
+const avatarPreview = document.getElementById('avatar-preview');
+const uploadText = document.querySelector('.upload-text');
+const uploadActions = document.querySelector('.upload-actions');
+const removeButton = document.getElementById('remove-avatar-button');
+const changeButton = document.getElementById('change-avatar-button');
+const uploadIconWrapper = document.querySelector('.upload-icon');
+
+uploadInput.addEventListener('change', () => {
+  const file = uploadInput.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      avatarPreview.src = e.target.result;
+      uploadText.style.display = "none";
+      uploadActions.style.display = "flex";
+      uploadIconWrapper.classList.add("user-uploaded");
+      uploadIconWrapper.style.padding = "0";
+    };
+    reader.readAsDataURL(file);
+  }
+})
+
+removeButton.addEventListener('click', () => {
+  uploadInput.value = "";
+  avatarPreview.src = "assets/images/icon-upload.svg";
+  uploadText.style.display = "block";
+  uploadActions.style.display = "none";
+  uploadIconWrapper.classList.remove("user-uploaded");
+  uploadIconWrapper.style.padding = "0.6rem";
+});
+
+changeButton.addEventListener('click', () => {
+  uploadInput.click();
+});
